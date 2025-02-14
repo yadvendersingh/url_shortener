@@ -21,7 +21,7 @@ def validate_url(url):
     return True
 
 st.title("URL Shortener")
-baseurl = "http://localhost:8000/url/"
+baseurl = "http://ysurlshortener.streamlit.app:8000/url/"
 complete_url = st.text_input("Enter the URL to shorten")
 short_url = st.text_input("Enter the short URL")
 input = {"complete_url": complete_url, "short_url": short_url}
