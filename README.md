@@ -31,13 +31,7 @@ This is a URL Shortener application that consists of a backend API built with Fa
     pip install -r requirements.txt
     ```
 
-2. Run the backend:
-
-    ```sh
-    fastapi run backend.py --host 0.0.0.0 --port 8000
-    ```
-
-3. Run the frontend:
+2. Run the frontend:
 
     ```sh
     streamlit run frontend.py --server.port 8501
