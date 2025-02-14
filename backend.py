@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 import sqlite3
+import uvicorn
 from sqlite3 import Error
 from pydantic import BaseModel
 from fastapi.responses import RedirectResponse, JSONResponse
@@ -51,3 +52,6 @@ async def createurl(input: URLObject):
     if not db.insert_url(input.complete_url, input.short_url):
         return JSONResponse(status_code=404, content={"message": "Record already exist. Try another short URL!"})
     return JSONResponse(status_code=200, content={"message": "Successfully created!"})
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)
